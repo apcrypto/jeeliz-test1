@@ -22,7 +22,7 @@ function init(spec) {
 
       gltf.scene.scale.multiplyScalar(10);
       gltf.scene.rotation.set(0, 0, 0);
-      gltf.scene.position.set(0, 0, 1);
+      gltf.scene.position.set(0, -0.5, 1);
 
       threeStuffs.faceObject.add(gltf.scene);
     },
