@@ -20,7 +20,7 @@ function init(spec) {
       // gltf.asset; // Object
       // console.log(gltf);
 
-      gltf.scene.scale.multiplyScalar(11);
+      gltf.scene.scale.multiplyScalar(10);
       gltf.scene.rotation.set(0, 0, 0);
       gltf.scene.position.set(0, -0.5, 1);
 
