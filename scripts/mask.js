@@ -5,9 +5,10 @@ function init(spec) {
   // IMPORT THE GLTF MODEL:
   const gltfLoader = new THREE.GLTFLoader();
   gltfLoader.load(
-    "./glTF/scene.gltf",
+    // "https://mbkassets.s3-eu-west-1.amazonaws.com/dev/ar/ad_glasses.glb",
+    "./glTF3/scene.gltf",
     function (gltf) {
-      const ambientLight = new THREE.AmbientLight(0xaaaaaa);
+      const ambientLight = new THREE.AmbientLight(0xffffff);
       const pointLight = new THREE.DirectionalLight(0xffffff, 1);
 
       gltf.scene; // THREE.Scene
@@ -19,9 +20,9 @@ function init(spec) {
       // gltf.asset; // Object
       // console.log(gltf);
 
-      gltf.scene.scale.multiplyScalar(0.6);
+      gltf.scene.scale.multiplyScalar(10);
       gltf.scene.rotation.set(0, 0, 0);
-      gltf.scene.position.set(0, -0.4, 0);
+      gltf.scene.position.set(0, 0, 1);
 
       threeStuffs.faceObject.add(gltf.scene);
     },
